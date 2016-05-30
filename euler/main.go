@@ -6,11 +6,11 @@ import (
 )
 
 func main() {
-	p := getProducts()
+	p := getLargestProduct()
 	fmt.Println(p)
 }
 
-func getProducts() int {
+func getLargestProduct() int {
 	var arr []int
 	for i := 100; i < 1000; i++ {
 		for j := 100; j < 1000; j++ {
