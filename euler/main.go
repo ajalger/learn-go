@@ -13,7 +13,7 @@ func main() {
 func getProducts() int {
 	var arr []int
 	for i := 100; i < 1000; i++ {
-		for j := i + 1; j < 1000; j++ {
+		for j := 100; j < 1000; j++ {
 			m := multiplyToString(i, j)
 			if palindrome(m) {
 				m, _ := strconv.Atoi(m)
