@@ -11,27 +11,19 @@ func main() {
 }
 
 func getLargestProduct() int {
-	var arr []int
+	var total int
 	for i := 100; i < 1000; i++ {
 		for j := 100; j < 1000; j++ {
 			m := multiplyToString(i, j)
-			if palindrome(m) {
+			if isPalindrome(m) {
 				m, _ := strconv.Atoi(m)
-				arr = append(arr, m)
+				if total < m {
+					total = m
+				}
 			}
 		}
 	}
-	return largestNumber(arr)
-}
-
-func largestNumber(arr []int) int {
-	var largest int
-	for _, v := range arr {
-		if largest < v {
-			largest = v
-		}
-	}
-	return largest
+	return total
 }
 
 func multiplyToString(num1 int, num2 int) string {
@@ -39,7 +31,7 @@ func multiplyToString(num1 int, num2 int) string {
 	return strconv.Itoa(total)
 }
 
-func palindrome(num string) bool {
+func isPalindrome(num string) bool {
 	var length = len(num)
 	for i := 0; i < (length / 2); i++ {
 		if num[i] != num[length - 1 - i] {
