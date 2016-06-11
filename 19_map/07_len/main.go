@@ -10,6 +10,7 @@ func main() {
 	}
 
 	myGreeting["Harleen"] = "Howdy"
+	myGreeting["Henry"] = "Woof"
 
 	fmt.Println(len(myGreeting))
 }
