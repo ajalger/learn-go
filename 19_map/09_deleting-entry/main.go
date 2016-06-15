@@ -12,8 +12,8 @@ func main() {
 	}
 
 	fmt.Println(myGreeting)
-	//delete(myGreeting, "two")
-	//delete(myGreeting, "three")
+	delete(myGreeting, "two")
+	delete(myGreeting, "three")
 	myGreeting["four"] = "What Up!"
 	myGreeting["one"] = "Asalamu Alaykum"
 	myGreeting["five"] = "Domo Arigato"
