@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"github.com/fatih/color"
+)
 
 func main() {
 
@@ -11,11 +13,14 @@ func main() {
 		3: "Bongiorno!",
 	}
 
+	d := color.New(color.FgCyan)
+	c := color.New(color.FgGreen)
+
 	for key, val := range myGreeting {
-		fmt.Println(key, " - ", val)
+		d.Println(key, " - ", val)
 	}
 
 	for i := 0; i < len(myGreeting); i++ {
-		fmt.Println(i, "-", myGreeting[i])
+		c.Println(i, "-", myGreeting[i])
 	}
 }
