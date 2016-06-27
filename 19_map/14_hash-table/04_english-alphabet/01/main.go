@@ -1,10 +1,10 @@
 package main
 
 import (
-	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
+	"github.com/fatih/color"
 )
 
 func main() {
@@ -15,6 +15,7 @@ func main() {
 
 	bs, _ := ioutil.ReadAll(res.Body)
 	str := string(bs)
-	fmt.Println(str)
+	blue := color.New(color.FgBlue)
+	blue.Println(str)
 
 }
